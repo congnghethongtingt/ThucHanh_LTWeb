@@ -8,7 +8,7 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 }
 
-<h2>Create Book</h2>
+<h2>Tạo sách mới</h2>
 
 
 @using (Html.BeginForm())
@@ -16,7 +16,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Book</h4>
+        <h4>Thông tin sách</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -53,14 +53,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Tạo mới" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "ListBookModel")
+    @Html.ActionLink("Trở lại", "ListBookModel")
 </div>
 
 @section Scripts {
