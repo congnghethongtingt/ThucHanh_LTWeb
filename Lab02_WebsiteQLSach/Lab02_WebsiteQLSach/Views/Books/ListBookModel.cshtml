@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Lab02_WebsiteQLSach.Models.Book>
+
+@{
+    ViewBag.Title = "ListBookModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List Book Model</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateBook")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagecover)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Author)
+    </td>
+    <td>
+        <img src="@item.Imagecover" width="95" title="cover" /> @*Hiển thị hình ảnh*@
+    </td>
+    <td>
+        <a href="/Books/EditBook/@item.Id" title="Edit Book">Edit</a>
+    </td>
+    <td>
+        <a href="/Books/DetailsBook/@item.Id" title="Details Book">Details</a>
+    </td>
+    <td>
+        <a href="/Books/DeleteBook/@item.Id" title="Delete Book">Delete</a>
+    </td>
+</tr>
+}
+
+</table>
