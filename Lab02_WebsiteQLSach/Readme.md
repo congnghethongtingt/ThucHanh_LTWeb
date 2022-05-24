@@ -1,4 +1,4 @@
-# LAB02
+# LAB02 - ASP.NET MVC
 
 ####
 
