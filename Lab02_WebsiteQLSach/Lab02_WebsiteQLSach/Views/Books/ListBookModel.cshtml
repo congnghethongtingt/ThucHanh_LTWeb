@@ -24,27 +24,28 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Title)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Author)
-    </td>
-    <td>
-        <img src="@item.Imagecover" width="95" title="cover" /> @*Hiển thị hình ảnh*@
-    </td>
-    <td>
-        <a href="/Books/EditBook/@item.Id" title="Edit Book">Sửa</a>
-    </td>
-    <td>
-        <a href="/Books/DetailsBook/@item.Id" title="Details Book">Chi tiết</a>
-    </td>
-    <td>
-        <a href="/Books/DeleteBook/@item.Id" title="Delete Book">Xóa</a>
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                <img src="@item.Imagecover" width="95" title="cover" /> @*Hiển thị hình ảnh*@
+            </td>
+            <td>
+                <a href="/Books/EditBook/@item.Id" title="Edit Book">Sửa</a>
+            </td>
+            <td>
+                <a href="/Books/DetailsBook/@item.Id" title="Details Book">Chi tiết</a>
+            </td>
+            <td>
+                <a href="/Books/DeleteBook/@item.Id" title="Delete Book">Xóa</a>
+            </td>
+        </tr>
+    }
 
 </table>
