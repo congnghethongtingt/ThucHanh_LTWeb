@@ -33,6 +33,11 @@ namespace Lab3_WebsiteBigSchool.Controllers
         [HttpPost]
         public ActionResult Create(CourseViewModel viewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                viewModel.Categories = _dbContext.Categories.ToList();
+                return View("Create", viewModel);
+            }
             var course = new Cource
             {
                 LecturerId = User.Identity.GetUserId(),
