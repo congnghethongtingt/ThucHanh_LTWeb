@@ -1,0 +1,118 @@
+﻿
+* {
+    color: #9d5858;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+p {
+    margin: 0 0 10px;
+    color: #378fc3;
+}
+
+h2, .h2 {
+    font-size: 30px;
+    color: #000;
+}
+
+h4, .h4 {
+    font-size: 20px;
+    color: #000;
+}
+
+dt {
+    color: black;
+}
+
+dd {
+    margin-left: 0;
+    color: black;
+}
+
+
+.field-validation-valid {
+    color: #000;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #000;
+}
+
+.navbar-inverse {
+    background-color: #378fc3;
+    border-color: #378fc3;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #c5c1c1;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ffffff;
+    }
+
+
+.btn-primary {
+    color: #000;
+    background-color: #ffffff;
+    border-color: #babec3;
+    font-weight: 600;
+}
+    /*Khi lia chuot vao btn*/
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #378fc3;
+        border-color: #378fc3;
+    }
+
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.course {
+    list-style: none;
+}
+
+    .course > li {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .course > li .date {
+            text-align: center;
+            background-color: #d41d50;
+            color: var(--white);
+            width: 60px;
+            border-radius: 8px;
+        }
+
+        .course > li details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+        }
