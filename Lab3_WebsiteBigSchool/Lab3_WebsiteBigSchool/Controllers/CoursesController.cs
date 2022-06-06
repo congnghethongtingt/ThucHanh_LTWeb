@@ -1,5 +1,8 @@
 ﻿using Lab3_WebsiteBigSchool.Models;
 using Lab3_WebsiteBigSchool.ViewModels;
+using Microsoft.AspNet.Identity;
+using System;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -36,13 +39,15 @@ namespace Lab3_WebsiteBigSchool.Controllers
             }
             var course = new Course
             {
-                //LecturerId = User.Identity.get
+                LecturerId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place
             };
+            
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
+            
             return RedirectToAction("Index", "Home");
         }
     }

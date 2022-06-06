@@ -13,7 +13,7 @@ namespace Lab3_WebsiteBigSchool.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202206060648563_InitialModel"; }
+            get { return "202206060859054_InitialModel"; }
         }
         
         string IMigrationMetadata.Source
