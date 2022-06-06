@@ -221,3 +221,4 @@ F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\La
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.CreateTableCourse.resources
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.PopulateCategoryTable.resources
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.csproj.AssemblyReference.cache
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddNameColumnToApplicationUser.resources

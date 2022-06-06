@@ -9,6 +9,7 @@ namespace Lab3_WebsiteBigSchool.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public ApplicationDbContext()
