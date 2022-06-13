@@ -221,4 +221,10 @@ F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\La
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.CreateTableCourse.resources
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.PopulateCategoryTable.resources
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddNameColumnToApplicationUser.resources
-F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.csproj.AssemblyReference.cache
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Net.Http.Formatting.dll
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.dll
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.WebHost.dll
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Net.Http.Formatting.xml
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.xml
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.WebHost.xml
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddAttendance.resources
