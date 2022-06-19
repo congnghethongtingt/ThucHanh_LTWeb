@@ -228,3 +228,4 @@ F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.N
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.xml
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.WebHost.xml
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddAttendance.resources
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddFollowingsTable.resources

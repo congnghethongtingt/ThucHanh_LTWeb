@@ -29,5 +29,6 @@ namespace Lab3_WebsiteBigSchool.ViewModels
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
+
     }
 }
