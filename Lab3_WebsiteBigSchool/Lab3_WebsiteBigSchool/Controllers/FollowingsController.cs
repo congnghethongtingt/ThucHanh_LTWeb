@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace Lab3_WebsiteBigSchool.Controllers
 {
+    [Authorize]
     public class FollowingsController : ApiController
     {
         private readonly ApplicationDbContext _dbContext;
@@ -29,8 +30,8 @@ namespace Lab3_WebsiteBigSchool.Controllers
 
             var folowing = new Following
             {
-                FollowerId = userId,
-                FolloweeId = followingDto.FolloweeId
+                FolloweeId = followingDto.FolloweeId,
+                FollowerId = userId
             };
 
             _dbContext.Followings.Add(folowing);

@@ -14,7 +14,7 @@ namespace Lab3_WebsiteBigSchool.Controllers
     [Authorize]
     public class AttendancesController : ApiController
     {
-        private ApplicationDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
 
         public AttendancesController()
         {

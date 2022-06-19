@@ -229,3 +229,4 @@ F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.W
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Web.Http.WebHost.xml
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddAttendance.resources
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddFollowingsTable.resources
+F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.csproj.AssemblyReference.cache
