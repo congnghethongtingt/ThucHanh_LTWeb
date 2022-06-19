@@ -1,6 +1,7 @@
 ﻿using Lab3_WebsiteBigSchool.Models;
 using Lab3_WebsiteBigSchool.ViewModels;
 using Microsoft.AspNet.Identity;
+using Microsoft.OData.Edm;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
@@ -23,9 +24,54 @@ namespace Lab3_WebsiteBigSchool.Controllers
         {
             var viewModel = new CourseViewModel
             {
-                Categories = _dbContext.Categories.ToList()
+                Categories = _dbContext.Categories.ToList(),
+                Heading = "Add Course"
             };
-            return View(viewModel);
+            return View("CourseForm",viewModel);
+        }
+
+        [Authorize]
+        public ActionResult Edit(int id)
+        {
+            var userId = User.Identity.GetUserId();
+            var course = _dbContext.Courses.Single(c => c.Id == id && c.LecturerId == userId);
+
+            var viewModel = new CourseViewModel
+            {
+                Categories = _dbContext.Categories.ToList(),
+                Date = course.DateTime.ToString("dd/MM/yyyy"),
+                Time = course.DateTime.ToString("HH:mm"),
+                Category = course.CategoryId,
+                Place = course.Place,
+                Heading = "Edit Course",
+                Id = course.Id
+            };
+
+            
+            return View("CourseForm",viewModel);
+        }
+
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(CourseViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                viewModel.Categories = _dbContext.Categories.ToList();
+                return View("CourseForm", viewModel);
+            }
+            var userId = User.Identity.GetUserId();
+            var course = _dbContext.Courses.Single(c => c.Id == viewModel.Id && c.LecturerId == userId);
+
+            course.Place = viewModel.Place;
+            course.DateTime = viewModel.GetDateTime();
+            course.CategoryId = viewModel.Category;
+
+            _dbContext.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
 
         [Authorize]
@@ -36,7 +82,7 @@ namespace Lab3_WebsiteBigSchool.Controllers
             if (!ModelState.IsValid)
             {
                 viewModel.Categories = _dbContext.Categories.ToList();
-                return View("Create", viewModel);
+                return View("CourseForm", viewModel);
             }
             var course = new Course
             {
@@ -72,5 +118,25 @@ namespace Lab3_WebsiteBigSchool.Controllers
 
             return View(viewModel);
         }
+
+        [Authorize]
+        public ActionResult Mine()
+        {
+            var userId = User.Identity.GetUserId();
+            var courses = _dbContext.Courses
+                .Where(c => c.LecturerId == userId && c.DateTime > DateTime.Now)
+                .Include(l => l.Lecturer)
+                .Include(c => c.Category)
+                .ToList();
+
+            var viewModel = new CoursesViewModel
+            {
+                UpcomingCourses = courses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
+        }
+
     }
 }

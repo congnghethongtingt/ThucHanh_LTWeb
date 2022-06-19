@@ -10,6 +10,8 @@ namespace Lab3_WebsiteBigSchool.Models
     {
         public int Id { get; set; }
 
+        public bool IsCanceled { get; set; }
+
         public ApplicationUser Lecturer { get; set; }
 
         [Required]

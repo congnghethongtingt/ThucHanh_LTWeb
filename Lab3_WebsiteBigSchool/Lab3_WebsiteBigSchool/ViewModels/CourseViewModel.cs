@@ -9,6 +9,8 @@ namespace Lab3_WebsiteBigSchool.ViewModels
 {
     public class CourseViewModel
     {
+        public int Id { get; set; }
+
         [Required]
         public string Place { get; set; }
 
@@ -24,6 +26,12 @@ namespace Lab3_WebsiteBigSchool.ViewModels
         public byte Category { get; set; }
 
         public IEnumerable<Category> Categories { get; set; }
+
+        public string Heading { get; set; }
+        public string Action
+        {
+            get { return (Id != 0) ? "Update" : "Create"; }
+        }
 
         public DateTime GetDateTime()
         {
