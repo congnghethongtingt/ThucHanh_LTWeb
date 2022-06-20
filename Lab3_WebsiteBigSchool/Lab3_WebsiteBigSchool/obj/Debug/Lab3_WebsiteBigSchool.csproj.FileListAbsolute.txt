@@ -249,5 +249,4 @@ F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.T
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Text.Json.xml
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.Threading.Tasks.Extensions.xml
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\bin\System.ValueTuple.xml
-F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.csproj.AssemblyReference.cache
 F:\LapTrinhWeb\ThucHanh\Lab3_WebsiteBigSchool\Lab3_WebsiteBigSchool\obj\Debug\Lab3_WebsiteBigSchool.Migrations.AddIsCanceledColumnToCourse.resources

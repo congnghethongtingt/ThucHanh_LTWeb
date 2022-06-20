@@ -20,20 +20,24 @@
             </div>
             <div class="details">
                 <span class="lecturer">
-                    @course.Lecturer.Name
-                    @if (Model.ShowAction)
+                    <br /> @course.Lecturer.Name
+                    @if (course.IsCanceled)
                     {
-                        <button class="btn btn-default btn-smm js-toggle-follow" data-course-id="@course.LecturerId">Follow</button>
+                        <span class="label label-warning">Canceled</span>
+                    }
+                    @if (Model.ShowAction && !course.IsCanceled)
+                    {
+                        <button class="btn btn-default btn-smm js-toggle-follow" data-course-id="@course.LecturerId"> <br /> Follow</button>
                     }
 
                 </span>
                 <span class="category">
-                    @course.Category.Name
+                    <br />  @course.Category.Name
                 </span>
-                @if (Model.ShowAction)
+                @*@if (Model.ShowAction)
                 {
                     <button data-course-id="@course.Id" class="btn btn-default btn-smm js-toggle-attendance">Going?</button>
-                }
+                }*@
 
             </div>
         </li>
