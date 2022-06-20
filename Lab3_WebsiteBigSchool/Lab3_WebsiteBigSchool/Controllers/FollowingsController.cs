@@ -20,24 +20,38 @@ namespace Lab3_WebsiteBigSchool.Controllers
             _dbContext = new ApplicationDbContext();
         }
 
-
         [HttpPost]
         public IHttpActionResult Follow(FollowingDto followingDto)
         {
             var userId = User.Identity.GetUserId();
             if (_dbContext.Followings.Any(f => f.FollowerId == userId && f.FolloweeId == followingDto.FolloweeId))
-                return BadRequest("The Attendance already exits!");
+                return BadRequest("Following aleary exist!");
 
-            var folowing = new Following
+            var following = new Following
             {
-                FolloweeId = followingDto.FolloweeId,
-                FollowerId = userId
+                FollowerId = userId,
+                FolloweeId = followingDto.FolloweeId
             };
 
-            _dbContext.Followings.Add(folowing);
+            _dbContext.Followings.Add(following);
             _dbContext.SaveChanges();
 
             return Ok();
         }
+
+        [HttpDelete]
+        public IHttpActionResult DeleteFollow(string Id)
+        {
+            var userId = User.Identity.GetUserId();
+            var following = _dbContext.Followings.SingleOrDefault(f => f.FollowerId == userId && f.FolloweeId == Id);
+            if (following == null)
+            {
+                return NotFound();
+            }
+            _dbContext.Followings.Remove(following);
+            _dbContext.SaveChanges();
+            return Ok(Id);
+        }
+
     }
 }

@@ -9,6 +9,17 @@
         <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>*@
 
+@*<div class="row">
+        <ul>
+            @foreach (var course in Model.UpcomingCourses)
+                {
+                    <li>
+                        @course.DateTime - @course.Lecturer.Name
+                    </li>
+                }
+        </ul>
+    </div>*@
+
 <ul class="course">
     @foreach (var course in Model.UpcomingCourses)
     {
@@ -24,12 +35,12 @@
             <div class="details">
                 <span class="lecturer">
                     @course.Lecturer.Name
-                    @if (Model.ShowAction)
-                    {
-                        <button class="btn btn-default btn-smm js-toggle-follow" data-course-id="@course.LecturerId">Follow</button>
-                    }
-
                 </span>
+                @if (Model.ShowAction)
+                {
+                    <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
+                }
+
                 <span class="category">
                     @course.Category.Name
                 </span>
@@ -62,14 +73,34 @@
 
             $(".js-toggle-follow").click(function (e) {
                 var button = $(e.target);
-                $.post("/api/followings", { followeeId: button.attr("data-user-id") })
-                    .done(function () {
-                        button.text("Following");
+                if (button.hasClass("btn-default")) {
+                    $.post("/api/followings", { followeeId: button.attr("data-user-id") })
+                        .done(function () {
+                            button
+                                .removeClass("btn-default")
+                                .addClass("btn-info")
+                                .text("Following");
+                        })
+                        .fail(function () {
+                            alert("Something failed!");
+                        });
+                }
+                else {
+                    $.ajax({
+                        url: "/api/followings/" + button.attr("data-user-id"),
+                        method: "DELETE"
                     })
-                    .fail(function () {
-                        alert("Something failed!!");
-                    });
-            })
+                        .done(function () {
+                            button
+                                .removeClass("btn-info")
+                                .addClass("btn-default")
+                                .text("Follow");
+                        })
+                        .fail(function () {
+                            alert("Something failed!");
+                        });
+                }
+            });
         });
     </script>
 }
